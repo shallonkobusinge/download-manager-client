@@ -20,8 +20,6 @@ public class AppController {
         try {
             RestTemplate restTemplate = new RestTemplate();
             ResponseEntity<Links[]> links = restTemplate.getForEntity("http://localhost:5500/api/v1/links", Links[].class);
-            System.out.println(links.getBody().length);
-            System.out.println(Objects.requireNonNull(links.getBody())[0].getLinkName());
 
             model.addAttribute("links", links.getBody());
             return "Report";
