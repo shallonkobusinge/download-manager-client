@@ -9,21 +9,24 @@
     <title>Navbar</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100&display=swap');
-        *{
+
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        .navbar-container{
+
+        .navbar-container {
             display: flex;
             flex-direction: row;
             height: 3rem;
             width: 100%;
-            background: #496CE8;
+            background: #212121;
             justify-content: space-between;
             padding: 10px;
         }
-        .navbar-container h2{
+
+        .navbar-container h2 {
             font-size: 16px;
             color: white;
         }

@@ -50,17 +50,19 @@
             height: 3rem;
             background: rgba(148, 164, 220, 0.25);
             outline: 0;
-            border:none;
+            border: none;
             padding-left: 10px;
         }
-        .form-container-sub label{
+
+        .form-container-sub label {
             font-size: 16px;
             font-family: 'Poppins', sans-serif;
         }
-        .form-container button{
+
+        .form-container button {
             width: 14rem;
             height: 3rem;
-            background: #496CE8;
+            background: #212121;
             color: white;
             border: none;
             outline: 0;
@@ -68,7 +70,8 @@
             margin-top: 20px;
             cursor: pointer;
         }
-        .register-employee-container-sub{
+
+        .register-employee-container-sub {
             display: flex;
             flex-direction: column;
             margin-top: 20px;

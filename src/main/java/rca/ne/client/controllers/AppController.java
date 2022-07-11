@@ -16,11 +16,17 @@ public class AppController {
     }
     @PostMapping("/download")
     public String downloadPage(String url) {
-        System.out.println("Url "+ url);
+        System.out.println("Url " + url);
         RestTemplate restTemplate = new RestTemplate();
         String URL = "http://localhost:5500/api/v1/websites";
-        ResponseEntity<String> response = restTemplate.postForEntity(URL,url, String.class);
-        System.out.println("Response "+ response.getBody());
+        try {
+            ResponseEntity<String> response = restTemplate.postForEntity(URL, url, String.class);
+            System.out.println("Response " + response.getBody());
+        } catch (Exception e) {
+            System.out.println("Exception " + e.getMessage());
+        }
+
+
         return "";
     }
 }

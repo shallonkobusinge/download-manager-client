@@ -54,8 +54,8 @@
 
         }
         .modification-buttons{
-            width:6rem;
-            height:2rem;
+            width: 6rem;
+            height: 2rem;
             background: rgba(148, 164, 220, 0.25);
             color: black;
             border: none;
@@ -63,8 +63,9 @@
             margin-top: 10px;
             font-size: 16px;
         }
-        .modification-buttons:hover{
-            background: #496CE8;
+
+        .modification-buttons:hover {
+            background: #212121;
             color: white;
             cursor: pointer;
         }
