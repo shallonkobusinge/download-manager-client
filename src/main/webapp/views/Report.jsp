@@ -78,7 +78,7 @@
     <input type="button" value="Download New Website" class="modification-buttons ml-"
            onclick="window.location.href='/form'"/>
 
-    <h2>View Links</h2>
+    <h2>Report</h2>
     <div class="view-employees-container-sub">
         <table>
             <thead class="table-header">
@@ -93,8 +93,8 @@
             <tbody class="table-body">
             <c:forEach items="${links}" var="link">
                 <tr>
-                    <td> ${link.linkName.split("/")[2]} ${link.linkName.split(" ")[1]}</td>
-                    <td>${link.website.name.split("www.")[1]}</td>
+                    <td> ${link.linkName.split("/")[2]}</td>
+                    <td class="text-left pr-2">${link.website.name}</td>
                     <td>${link.website.startDate}</td>
                     <td>${link.website.endDate}</td>
 
