@@ -17,9 +17,11 @@ public class Links {
 
     private Long id;
     private String linkName;
+
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime totalElapsedTime;
+
     private String numberOfKilobytesDownloaded;
     private Website website;
 }

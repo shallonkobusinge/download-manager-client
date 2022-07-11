@@ -89,7 +89,7 @@
 <body>
 <jsp:include page="../components/Navbar.jsp"></jsp:include>
 <div class="form-container">
-    <h2>Register</h2>
+    <h2>Download url</h2>
 
     <form action="/download" method="post">
 
