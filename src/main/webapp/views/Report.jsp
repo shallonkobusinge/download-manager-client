@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>View Websites</title>
+    <title>View Report</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100&display=swap"
@@ -53,10 +53,11 @@
             text-align: left;
 
         }
-        .modification-buttons{
-            width: 6rem;
+
+        .modification-buttons {
+            width: 26rem;
             height: 2rem;
-            background: rgba(148, 164, 220, 0.25);
+            background: rgb(19, 17, 17);
             color: black;
             border: none;
             outline: 0;
@@ -74,32 +75,33 @@
 <body>
 <jsp:include page="../components/Navbar.jsp"></jsp:include>
 <div class="view-employees-container">
-    <h2>View Employees</h2>
+    <input type="button" value="Download New Website" class="modification-buttons ml-"
+           onclick="window.location.href='/form'"/>
+
+    <h2>View Links</h2>
     <div class="view-employees-container-sub">
         <table>
             <thead class="table-header">
-            <th>Names</th>
-            <th>Email</th>
-            <th>Username</th>
-            <th>Phone</th>
-            <th>Department</th>
-            <th colspan="2">Action</th>
+            <th>Link Name</th>
+            <th>Website Name</th>
+            <th>Website Download Start Data</th>
+            <th>Website Download End Date</th>
+            <th>Number of Kilobytes</th>
+            <th>Elapsed Time</th>
 
             </thead>
             <tbody class="table-body">
-            <c:forEach items="${employees}" var="employee">
-                <tr >
-                    <td>${employee.user.firstName} ${employee.user.lastName}</td>
-                    <td>${employee.user.email}</td>
-                    <td>${employee.user.username}</td>
-                    <td>${employee.user.phone}</td>
-                    <td>${employee.departments }</td>
-                    <td>
-                        <input type="button" name="${employee.id}" value="Edit" class="modification-buttons"  onclick="window.location.href='/employees/one?id=${employee.id}'"/>
-                    </td>
-                    <td>
-                        <input type="button" name="${employee.id}" value="Delete" class="modification-buttons"  onclick="window.location.href='/employees/delete?id=${employee.id}'"/>
-                    </td>
+            <c:forEach items="${links}" var="link">
+                <tr>
+                    <td> ${link.linkName.split("/")[2]} ${link.linkName.split(" ")[1]}</td>
+                    <td>${link.website.name.split("www.")[1]}</td>
+                    <td>${link.website.startDate}</td>
+                    <td>${link.website.endDate}</td>
+
+                    <td>${link.website.numberOfKilobytesDownloaded}</td>
+                    <td>${link.totalElapsedTime}</td>
+
+
                 </tr>
 
             </c:forEach>
@@ -111,4 +113,5 @@
 </div>
 
 </body>
+<script src="https://cdn.tailwindcss.com"></script>
 </html>
